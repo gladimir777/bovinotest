@@ -1,11 +1,18 @@
 import React from "react";
+import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
 
-const Dashboard = () => {
+const Dashboard = ({ result }) => {
+  if (result.data === null) {
+    return <Redirect to="/" />;
+  }
   return (
     <div>
       <h1 className="title">Dashboard</h1>
     </div>
   );
 };
-
-export default Dashboard;
+const mapStateToProps = state => ({
+  result: state.login
+});
+export default connect(mapStateToProps, {})(Dashboard);

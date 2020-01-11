@@ -1,7 +1,7 @@
 import {
   LOGIN_SUCCES,
   LOGIN_FAIL,
-  LOGIN_LOADIN,
+  LOGIN_LOADING,
   LOAD_DATA
 } from "../action/type";
 
@@ -16,7 +16,7 @@ export default function(state = initialState, action) {
   const { type, payload } = action;
 
   switch (type) {
-    case LOGIN_LOADIN:
+    case LOGIN_LOADING:
       return {
         ...state,
         loading: true

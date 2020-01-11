@@ -1,5 +1,5 @@
 import axios from "axios";
-import { LOGIN_SUCCES, LOGIN_FAIL, LOAD_DATA } from "./type";
+import { LOGIN_SUCCES, LOGIN_FAIL, LOAD_DATA, LOGIN_LOADING } from "./type";
 
 //Loading data user
 export const load = () => dispatch => {
@@ -8,8 +8,11 @@ export const load = () => dispatch => {
 
 //Login user
 export const login = (userName, token) => async dispatch => {
+  dispatch({
+    type: LOGIN_LOADING
+  });
+
   try {
-    console.log("action login");
     const res = await axios.get("http://ganaderos.cl/sipec/animals", {
       params: {
         username: userName,

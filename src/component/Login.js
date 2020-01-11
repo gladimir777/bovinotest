@@ -7,7 +7,7 @@ import { login, load } from "../action/login.js";
 const Login = ({ login, result, load }) => {
   useEffect(() => {
     load();
-  }, []);
+  }, [load]);
 
   //Usamos el hook useState para tomar los datos del formulario y agragarlo en el state de la app.
   const [formData, setFormData] = useState({
@@ -15,7 +15,7 @@ const Login = ({ login, result, load }) => {
     token: ""
   });
 
-  if (result.data != null && !result.data.loading) {
+  if (result.data != null && !result.loading) {
     return <Redirect to="/dashboard" />;
   }
 
@@ -68,7 +68,11 @@ const Login = ({ login, result, load }) => {
                   }}
                 />
 
-                <input type="submit" className="btn-animate" value="Login" />
+                <input
+                  type="submit"
+                  className="btn-animate"
+                  value={`Login ${result.loading ? "..." : ""}`}
+                />
               </form>
             </div>
 
