@@ -1,8 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell, faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import { connect } from "react-redux";
 
-const Header = () => {
+const Header = ({ result }) => {
   return (
     <div className="header-container">
       <div className="header">
@@ -14,12 +15,14 @@ const Header = () => {
             <li>
               <FontAwesomeIcon icon={faUserCircle} size="2x" />
             </li>
-            <li className="user-list">Jacobsen</li>
+            <li className="user-list">{result.sipecProcessInfo.username}</li>
           </ul>
         </nav>
       </div>
     </div>
   );
 };
-
-export default Header;
+const mapStateToProps = state => ({
+  result: state.login.data
+});
+export default connect(mapStateToProps, {})(Header);
