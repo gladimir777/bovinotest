@@ -1,5 +1,7 @@
 import React, { Fragment, useEffect } from "react";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 import Login from "./component/Login";
 import Dashboard from "./component/dashboard/Dashboard";
@@ -10,7 +12,7 @@ import store from "./store";
 import { load } from "./action/login";
 
 import "./App.css";
-
+library.add(faCheckSquare, faCoffee);
 const App = ({ result }) => {
   useEffect(() => {
     store.dispatch(load());

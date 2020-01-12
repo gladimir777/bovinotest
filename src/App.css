@@ -3,18 +3,11 @@ body * {
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
-
+body {
+  background-color: #edf7fa;
+}
 .title {
   color: black;
-}
-body {
-  background: linear-gradient(
-      rgba(246, 247, 249, 0.8),
-      rgba(246, 247, 249, 0.8)
-    ),
-    url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/sky-clouds-cloudy-mountain.jpg)
-      no-repeat center center fixed;
-  background-size: cover;
 }
 
 .container {
@@ -519,4 +512,46 @@ a.btn-goback:hover {
   cursor: pointer;
   fill: #1059ff;
   transform: rotate(180deg);
+}
+
+/*Header style*/
+.header-container {
+  position: relative;
+  top: -20px;
+  height: 100px;
+  background-color: #0f4c75;
+}
+
+.header-container h1 {
+  color: white !important;
+}
+
+.nav-container {
+  float: right;
+  padding-right: 30px;
+  margin-top: 30px;
+}
+
+ul .user-list {
+  position: relative;
+  top: -5px;
+}
+
+ul {
+  z-index: 2;
+}
+
+.main-nav-continer {
+  background-color: white;
+  width: 200px;
+  height: 100vh;
+  position: absolute;
+  top: 5px;
+  border-top-left-radius: 10px;
+  border: 1px solid #e5e4cc;
+}
+
+.main-nav-continer h3 {
+  padding-left: 10px;
+  color: #0f4c75;
 }
