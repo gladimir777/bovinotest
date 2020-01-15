@@ -3,7 +3,6 @@ import { withRouter, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
 const AnimalDetail = ({ history, result, match }) => {
-  console.log("Id animals", match.params.id);
   if (result === null) {
     return <Redirect to="/" />;
   }

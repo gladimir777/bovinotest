@@ -31,7 +31,6 @@ const Login = ({ login, result, load }) => {
   const onSubmit = e => {
     e.preventDefault();
     login(userName, token);
-    console.log("submit", result);
   };
 
   return (
