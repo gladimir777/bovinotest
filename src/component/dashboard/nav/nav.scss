@@ -1,0 +1,31 @@
+.main-nav-continer {
+  background-color: white;
+  width: 200px;
+  height: calc(100vh - 5px);
+  position: absolute;
+  top: 5px;
+  border-top-left-radius: 10px;
+  border: 1px solid #e5e4cc;
+
+  h3 {
+    padding-left: 10px;
+    color: #0f4c75;
+  }
+}
+
+.main-nav-continer {
+  ul {
+    padding: 0;
+    list-style-type: none;
+    li {
+      padding: 5px;
+      &.tractor-icon {
+        color: #0f4c75;
+        padding-left: 10px;
+        span {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
