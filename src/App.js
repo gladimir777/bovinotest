@@ -15,6 +15,7 @@ import Header from "./component/Header";
 import Animal from "./component/animal/Animal";
 import Farm from "./component/farm/Farm";
 import AnimalDetail from "./component/animal/AnimalDetail";
+import Alet from "./component/Alert";
 
 // Redux
 import { Provider } from "react-redux";

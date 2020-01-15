@@ -20,7 +20,6 @@ export const login = (userName, token) => async dispatch => {
       }
     });
 
-    console.log(res.data);
     dispatch({ type: LOGIN_SUCCES, payload: res.data });
   } catch (error) {
     if (error) {

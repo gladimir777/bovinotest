@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
+import Alert from "./Alert";
 
 import { login, load } from "../action/login.js";
 
@@ -36,6 +37,7 @@ const Login = ({ login, result, load }) => {
   return (
     <Fragment>
       <div>
+        <Alert />
         <div className="container">
           <div className="frame">
             <div className="nav">
